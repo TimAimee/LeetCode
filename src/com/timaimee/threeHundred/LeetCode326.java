@@ -8,7 +8,6 @@ package com.timaimee.threeHundred;
 public class LeetCode326 {
 	public static void main(String[] args) {
 		System.out.println(isPowerOfThreeByjlu_chuang(6));
-
 	}
 
 	//

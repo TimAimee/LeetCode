@@ -8,6 +8,7 @@ package com.timaimee.threeHundred;
 public class LeetCode344 {
 	public static void main(String[] args) {
 		System.out.println(reverseStringByChar("string"));
+		
 	}
 
 	//5ms
