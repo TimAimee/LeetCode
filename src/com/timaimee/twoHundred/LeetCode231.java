@@ -47,5 +47,10 @@ public class LeetCode231 {
 		}
 		return true;
 	}
+	//1ms   understand! 4&3=0,8&7=0
+	public static boolean isPowerOfTwoBySajeev(int n) {
+        if(n < 1) return false;
+        return (0 == ((n - 1) & n));
+    }
 
 }
