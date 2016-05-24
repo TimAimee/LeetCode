@@ -3,7 +3,7 @@ package com.timaimee.threeHundred;
 /**
  * @author timaimee
  * @date 2016-05-24 21:12
- * @des Reverse String
+ * @des Reverse  String
  */
 public class LeetCode344 {
 	public static void main(String[] args) {

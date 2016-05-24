@@ -3,7 +3,7 @@ package com.timaimee.zero;
 /**
  * @author timaimee
  * @date 2016-05-23 23:10
- * @des String to Integer (atoi)
+ * @des String to  Integer (atoi)
  */
 public class LeetCode08 {
 	public static void main(String[] args) {
