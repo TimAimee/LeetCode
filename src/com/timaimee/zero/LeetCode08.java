@@ -10,6 +10,7 @@ public class LeetCode08 {
 		System.out.println(myAtoi("   +0 123"));
 	}
 
+	// to difficult to understand. I konw this coder is boll shit.
 	public static int myAtoi(String str) {
 		double value = 0;
 		boolean isMinus = false;
