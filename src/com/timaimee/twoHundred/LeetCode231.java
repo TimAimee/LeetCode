@@ -1,4 +1,4 @@
-package com.timamiee.twoHundred;
+package com.timaimee.twoHundred;
 //
 public class LeetCode231 {
 
