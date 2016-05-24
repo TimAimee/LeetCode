@@ -8,10 +8,10 @@ package com.timaimee.twoHundred;
  */
 public class LeetCode231 {
 	public static void main(String[] args) {
-		System.out.println(isPow(-16));
+		System.out.println(isPowerOfTwoBySajeev(1));
 	}
 
-	//4ms
+	// 4ms
 	public static boolean isPow(int n) {
 		if (n < 0) {
 			return false;
@@ -29,7 +29,7 @@ public class LeetCode231 {
 		return true;
 	}
 
-	//3ms
+	// 3ms
 	public static boolean isPowerOfTwo(int n) {
 		if (n < 0) {
 			return false;
@@ -47,10 +47,12 @@ public class LeetCode231 {
 		}
 		return true;
 	}
-	//1ms   understand! 4&3=0,8&7=0
+
+	// 1ms understand! 4&3=0,8&7=0
 	public static boolean isPowerOfTwoBySajeev(int n) {
-        if(n < 1) return false;
-        return (0 == ((n - 1) & n));
-    }
+		if (n < 1)
+			return false;
+		return (0 == ((n - 1) & n));
+	}
 
 }
