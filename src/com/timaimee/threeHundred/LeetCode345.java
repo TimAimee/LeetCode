@@ -8,6 +8,7 @@ public class LeetCode345 {
 	public static void main(String[] args) {
 		//the two ways is same , --> a e i o u<--, and swap
 		System.out.println(reverseVowelsByCaikehe("A man a plan a canal: Panama"));
+		
 		System.out.println(reverseVowelsbySCHBS("A man a plan a canal: Panama"));
 	}
 
