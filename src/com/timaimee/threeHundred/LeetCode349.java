@@ -19,7 +19,6 @@ public class LeetCode349 {
 
 	// my way 19ms o(n*n)
 	public static int[] intersection(int[] nums1, int[] nums2) {
-		long time = System.currentTimeMillis();
 		List<Integer> mInteger = new ArrayList<Integer>();
 		for (int i = 0; i < nums1.length; i++) {
 			for (int j = 0; j < nums2.length; j++) {
@@ -35,7 +34,6 @@ public class LeetCode349 {
 		for (int i = 0; i < arr.length; i++) {
 			arr[i] = mInteger.get(i);
 		}
-		System.out.println(System.currentTimeMillis() - time);
 		return arr;
 
 	}
