@@ -48,4 +48,18 @@ public class LeetCode343 {
 		}
 		return result;
 	}
+
+	// more simple and clean code
+	public static int integerBreakbymo8(int n) {
+		int k = n / 3;
+		int r = n % 3;
+
+		if (r == 0) {
+			return k == 1 ? 2 : (int) Math.pow(3, k);
+		} else if (r == 1) {
+			return (k - 1) == 0 ? 4 : (int) Math.pow(3, k - 1) * 4;
+		} else {
+			return (k == 0) ? 1 : (int) Math.pow(3, k) * 2;
+		}
+	}
 }
