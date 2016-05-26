@@ -41,7 +41,7 @@ public class LeetCode349 {
 
 	}
 
-	// other way use  two set
+	// other way use two set
 	public static int[] otherWayBy(int[] nums1, int[] nums2) {
 		Set<Integer> set = new HashSet<>();
 		Set<Integer> intersect = new HashSet<>();
@@ -63,7 +63,10 @@ public class LeetCode349 {
 
 	// other way use JAVA8
 	public static int[] otherWayUseJAVA8(int[] nums1, int[] nums2) {
-		Set<Integer> set = Arrays.stream(nums2).boxed().collect(Collectors.toSet());
-		return Arrays.stream(nums1).distinct().filter(e -> set.contains(e)).toArray();
+		// Set<Integer> set =
+		// Arrays.stream(nums2).boxed().collect(Collectors.toSet());
+		// return Arrays.stream(nums1).distinct().filter(e ->
+		// set.contains(e)).toArray();
+		return nums1;
 	}
 }
