@@ -1,7 +1,6 @@
 package com.timaimee.threeHundred;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -18,7 +17,7 @@ public class LeetCode349 {
 		intersection(nums1, nums2);
 	}
 
-	// my way 19ms
+	// my way 19ms o(n*n)
 	public static int[] intersection(int[] nums1, int[] nums2) {
 		long time = System.currentTimeMillis();
 		List<Integer> mInteger = new ArrayList<Integer>();
@@ -41,7 +40,7 @@ public class LeetCode349 {
 
 	}
 
-	// other way use two set
+	// other way use two set o(n)
 	public static int[] otherWayBy(int[] nums1, int[] nums2) {
 		Set<Integer> set = new HashSet<>();
 		Set<Integer> intersect = new HashSet<>();
@@ -59,6 +58,27 @@ public class LeetCode349 {
 			result[i++] = num;
 		}
 		return result;
+	}
+
+	// other way use set and arraylist 5ms time complexity o(n)
+	public static int[] otherWayByMitulshr(int[] nums1, int[] nums2) {
+		ArrayList<Integer> res = new ArrayList<Integer>();
+		HashSet<Integer> set = new HashSet<Integer>();
+		// Add all elements to set from array 1
+		for (int i = 0; i < nums1.length; i++)
+			set.add(nums1[i]);
+		for (int j = 0; j < nums2.length; j++) {
+			// If present in array 2 then add to res and remove from set
+			if (set.contains(nums2[j])) {
+				res.add(nums2[j]);
+				set.remove(nums2[j]);
+			}
+		}
+		// Convert ArrayList to array
+		int[] arr = new int[res.size()];
+		for (int i = 0; i < res.size(); i++)
+			arr[i] = res.get(i);
+		return arr;
 	}
 
 	// other way use JAVA8
