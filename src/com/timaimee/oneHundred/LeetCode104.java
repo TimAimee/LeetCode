@@ -19,21 +19,39 @@ public class LeetCode104 {
 		nodeTree0.right = nodeTree2;
 		nodeTree1.left = nodeTree3;
 		nodeTree1.right = nodeTree4;
-		nodeTree2.left = nodeTree5;
-		nodeTree2.right = nodeTree6;
-		travle(nodeTree0);
-		getMaxDepth(nodeTree0);
+		//nodeTree2.left = nodeTree5;
+		//nodeTree2.right = nodeTree6;
+		// travleFront(nodeTree0);
+		// travleBack(nodeTree0);
+		// getMaxDepth(nodeTree0);
+		getMinDepth(nodeTree0);
+
 	}
 
 	/**
-	 * travle thte binear tree
+	 * travle thte binear tree [front]
 	 * 
 	 * @param root
 	 */
-	private static void travle(NodeTree root) {
+	private static void travleFront(NodeTree root) {
 		if (root != null) {
-			travle(root.left);
-			travle(root.right);
+			System.out.println(root);
+			travleFront(root.left);
+			travleFront(root.right);
+		}
+
+	}
+
+	/**
+	 * travle thte binear tree [back]
+	 * 
+	 * @param root
+	 */
+	private static void travleBack(NodeTree root) {
+		if (root != null) {
+			travleBack(root.left);
+			travleBack(root.right);
+			System.out.println(root);
 		}
 
 	}
@@ -44,7 +62,21 @@ public class LeetCode104 {
 		} else {
 			int left = getMaxDepth(root.left);
 			int right = getMaxDepth(root.right);
-			return 1 + Math.max(left, right);
+			int deep = 1 + Math.max(left, right);
+			System.out.println(root + ",deep=" + deep);
+			return deep;
+		}
+	}
+
+	private static int getMinDepth(NodeTree root) {
+		if (root == null) {
+			return 0;
+		} else {
+			int left = getMaxDepth(root.left);
+			int right = getMaxDepth(root.right);
+			int deep = 1 + Math.min(left, right);
+			System.out.println(root + ",deep=" + deep);
+			return deep;
 		}
 	}
 
