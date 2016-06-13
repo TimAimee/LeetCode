@@ -19,7 +19,7 @@ public class LeetCode217 {
 		System.out.println(containsDuplicate(data));
 	}
 
-	//6ms beat 83%
+	//6ms beat 83%%%
 	public static boolean containsDuplicate(int[] nums) {
 		if (nums == null || nums.length <= 1) {
 			return false;
