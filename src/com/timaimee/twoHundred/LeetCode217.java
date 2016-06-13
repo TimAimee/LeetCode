@@ -19,16 +19,15 @@ public class LeetCode217 {
 		System.out.println(containsDuplicate(data));
 	}
 
-	// user set ,Time Limit Exceeded
+	//6ms beat 83%
 	public static boolean containsDuplicate(int[] nums) {
-		if (nums == null || nums.length == 0) {
+		if (nums == null || nums.length <= 1) {
 			return false;
 		}
 		Arrays.sort(nums);
 		int temp = nums[0];
 		int position = 0;
 		while (position < nums.length - 1) {
-			//System.out.println(nums[position]);
 			position++;
 			if (temp == nums[position]) {
 				return false;
