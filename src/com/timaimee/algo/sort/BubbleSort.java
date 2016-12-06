@@ -20,7 +20,7 @@ public class BubbleSort {
 	public static int[] sort(int arr[]) {
 		int temp = 0;
 		for (int i = 0; i < arr.length; i++) {
-			for (int j = 0 ; j < arr.length-i-1; j++) {//第二次循环要注意减i，以减少的次数
+			for (int j = 0 ; j < arr.length-i-1; j++) {//第二次循环要注意减i，以减少比较的次数
 				if (arr[j+1] < arr[j]) {			
 					temp = arr[j];
 					arr[j] = arr[j+1];
