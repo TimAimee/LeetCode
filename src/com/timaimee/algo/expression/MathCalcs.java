@@ -7,7 +7,7 @@ import java.util.Stack;
 /**
  * 计算数学表达式
  */
-public class MathCalc {
+public class MathCalcs {
     /**
      * 计算一下后辍表达式
      *
